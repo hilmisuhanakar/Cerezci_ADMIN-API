@@ -1,0 +1,67 @@
+﻿@model Model.Products
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+@using (Html.BeginForm("Edit", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Ürün Bilgisini Düzenle</h4>
+        <hr />
+
+        <table class="table table-bordered mt-3">
+            <tr>
+                <td><b>Ürün Adı</b></td>
+                <td><b>Ürün Tipi</b></td>
+                <td><b>Ürün Üretim Yeri</b></td>
+                <td><b>Ürün Fiyatı</b></td>
+                <td><b>Ürün Resmi</b></td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.ProductType, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductType, "", new { @class = "text-danger" })
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.ProductPlace, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductPlace, "", new { @class = "text-danger" })
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.ProductPrice, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductPrice, "", new { @class = "text-danger" })
+                </td>
+                <td>
+                    <img src="@Html.DisplayFor(model => model.ProductImage)" width="100" height="100" />
+                    @Html.EditorFor(model => model.ProductImage, new { htmlAttributes = new { @class = "form-control" ,type="file"} })
+                    @Html.ValidationMessageFor(model => model.ProductImage, "", new { @class = "text-danger" })
+                </td>
+                <td>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Kaydet" class="w3-bar-item w3-button btn-info" />
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+
+
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Listeye Geri Dön", "Index")
+</div>

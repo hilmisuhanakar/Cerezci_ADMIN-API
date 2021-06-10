@@ -1,0 +1,37 @@
+﻿@model Model.AdminInfo
+
+@{
+    ViewBag.Title = "LogIn";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+</head>
+<body>
+    <div>
+        @ViewBag.Hata
+    </div>
+    @using (Html.BeginForm("LogIn", "Admin", FormMethod.Post))
+    {
+        <div class="imgcontainer">
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label><b>Kullanıcı Adı</b></label>
+            @Html.TextBoxFor(m => m.UserName)
+
+            <label><b>Şifre</b></label>
+            @Html.PasswordFor(m => m.Password)
+
+            <button type="submit">Giriş</button>
+        </div>
+    }
+</body>
+</html>

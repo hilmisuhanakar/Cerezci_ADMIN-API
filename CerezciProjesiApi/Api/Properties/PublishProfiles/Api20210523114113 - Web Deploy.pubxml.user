@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkLDXmchpO0Cf5qW/UFuvnAAAAAACAAAAAAAQZgAAAAEAACAAAABv3SA9xC5i3Xsh8aX4KNXRz7NDRgE8Rv5SQ6epidJYTgAAAAAOgAAAAAIAACAAAADV5wuWFWsIZ/AqhmJETi2/SayqAw3kPgXLahG0F1HkqYAAAAC+Ld1aTy09yIP3SshPkfGE3NgxWY9PDaCRR0bf/os1BNuk3cahMGNMPnzbMZaVW79GjrXtdPnb3tAQN1WqOlgWF4XJJniWKmlZmkDC9TxyOBl2rAyXmSNEYcONgzNi66K59OnMs1vXtrRI7YphmuuvMn8P8f41KpkxwSSjZQX/ckAAAAAWOTC8kGmyHVMmYWg0GK3bnXVCWc3YnfACK1qvfhLeO6TLZx8j/U3G+ijpx01nUohNYupuUCiKMnCbBnRVbIHp</EncryptedPassword>
+    <History>True|2021-05-23T09:48:22.0140824Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ConnectionCerezciDb">
+      <Value>Data Source=tcp:sqlserverqytu447bv2bhq.database.windows.net,1433%3bInitial Catalog=Cerezci%3bUser Id=o20172013043%40sqlserverqytu447bv2bhq%3bPassword=BarBarya+627.</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

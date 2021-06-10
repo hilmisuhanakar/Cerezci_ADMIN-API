@@ -1,0 +1,48 @@
+﻿@model Model.Products
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h3>Silinecek Ürünün Bilgileri</h3>
+<div>
+    <hr />
+    <table class="table table-bordered mt-3">
+        <tr>
+            <td><b>Ürün Adı</b></td>
+            <td><b>Ürün Tipi</b></td>
+            <td><b>Ürün Üretim Yeri</b></td>
+            <td><b>Ürün Fiyatı</b></td>
+            <td><b>Ürün Resmi</b></td>
+        </tr>
+
+        <tr>
+            <td>@Html.DisplayFor(model => model.ProductName)</td>
+            <td>@Html.DisplayFor(model => model.ProductType)</td>
+            <td>@Html.DisplayFor(model => model.ProductPlace)</td>
+            <td>@Html.DisplayFor(model => model.ProductPrice)</td>
+            <td><img src="@Html.DisplayFor(model => model.ProductImage)" width="100" height="100" /></td>
+            <td>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Ürünü Sil" class="w3-bar-item w3-button btn-info" />
+                        <br />
+                    </div>
+                }
+            </td>
+        </tr>
+
+    </table>
+
+
+    <div class="form-actions no-color">
+        <br />
+        @Html.ActionLink("Listeye Geri Dön", "Index")
+    </div>
+</div>

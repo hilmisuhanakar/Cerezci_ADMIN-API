@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birol Kuruyemiş</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:20%">
+        <br /><br />
+        <h3 class="w3-bar-item">Admin Panel</h3>
+        <a href="/Products/Index" class="w3-bar-item w3-button btn-info">Ürünleri Listele</a><br />
+        <!--https://localhost:44315/Products/Index-->
+        <a href="/Products/Create" class="w3-bar-item w3-button btn-info">Yeni Ürün Ekle</a><br />
+        <!--https://localhost:44315/Products/Products/Create-->
+        <a href="https://brol-kuruyemis.vercel.app/" target="_blank" class="w3-bar-item w3-button btn-info">Siteye Git</a><br />
+        <a href="/Admin/LogOut" class="w3-bar-item w3-button btn-danger">Çıkış </a><br />
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left:20%">
+
+        <div class="w3-container w3-teal">
+            <h1><b>Admin</b></h1>
+        </div>
+
+
+
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+
+    </div>
+
+</body>
+</html>
